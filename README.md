@@ -4,3 +4,5 @@ springboot   microservice  project with 6 microservice and deployed on Azure kub
 
  grafana
 ![screencapture-grafana-a-gebeyalearning-d-k8s-views-ns-kubernetes-views-namespaces-2024-03-20-02_45_50 (1)](https://github.com/aron001/tele-insight-feedback-and-issue-resolution/assets/103599957/5525d709-79cc-4af5-b4dd-d8c7fee62585)
+# git lab ci/cd pipline status
+![screencapture-git-gebeya-training-tele-insight-capstone-project-tele-insight-capstone-project-pipelines-2024-03-20-02_50_40](https://github.com/aron001/tele-insight-feedback-and-issue-resolution/assets/103599957/8909e83a-3e0a-47f1-bd12-778555121fb2)
