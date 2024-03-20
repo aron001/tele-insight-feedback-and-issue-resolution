@@ -1,0 +1,16 @@
+# please use the enviroment variable or don't change the env names update based on that!!!!!!
+
+spring:
+  application:
+    name: service-discovery
+
+server:
+  port: ${SERVER_PORT:8761}
+
+eureka:
+  #   no need to use this instant part by defoult it use the local machine incase if you remove this comment   don't forget to comment again when you push
+  # instance:
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false

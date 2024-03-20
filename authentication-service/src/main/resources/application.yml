@@ -1,0 +1,38 @@
+# please use the enviroment variable or don't change the env names update based on that!!
+spring:
+  application:
+    name: authentication-service
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        globally_quoted_identifiers: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/tele-insight-ticketing-db}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+
+server:
+  port: ${SERVER_PORT:0}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE:http://localhost:8761/eureka/}
+
+token:
+  signing:
+    key: ${TOKEN_SIGNING_KEY:NqvOG0ZvRmlNblL8znGgfP/75qzYxFEWEtZhQD3sIWw=}
+
+springdoc:
+  swagger-ui:
+    path: /docs/auth/swagger-ui.html
+  api-docs:
+    path: /docs/auth/api-docs

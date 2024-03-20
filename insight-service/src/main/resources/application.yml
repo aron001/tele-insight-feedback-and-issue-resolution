@@ -1,0 +1,29 @@
+# please use the enviroment variable or don't change the env names update based on that!!!!
+spring:
+  application:
+    name: insight-service
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/tele-insight-blog-db}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+
+server:
+  port: ${SERVER_PORT:0}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE:http://localhost:8761/eureka/}
+
+springdoc:
+  swagger-ui:
+    path: /docs/insight/swagger-ui.html
+  api-docs:
+    path: /docs/insight/api-docs
